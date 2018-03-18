@@ -1,0 +1,39 @@
+<h1>Welcome to IN n Out Burger</h1>
+
+<h3>Please enter your burger order</h3>
+
+<ul>
+  {{#each burgers}}
+  	<li>
+  	   <p>ID: {{this.id}}</p>
+       <p>Wish: {{this.wish}}</p>
+  	</li>
+  {{/each}}
+</ul>
+
+
+<div>
+  <form action="/" method="POST">
+  	<textarea type="text" name="wish"></textarea>
+    <textarea type="text" name="task"></textarea>
+
+  	<button type="submit">Submit</button>
+  </form>
+</div>
+
+
+<ul>
+  {{#each burgers}}
+  	<li>
+       <p>burger: {{this.burger}}</p>
+  	</li>
+  {{/each}}
+</ul>
+
+<div>
+<form action="/" method="POST">
+<button type="submit">EAT ME</button>
+
+  </form>
+</div>
+
