@@ -28,12 +28,16 @@ router.get("/", function(req, res) {
   });
 });
 
-// router.post("/api/burgers", function(req, res) {
-//   burger.create(["name", "sleepy"], [req.body.name, req.body.sleepy], function(result) {
-//     // Send back the ID of the new quote
-//     res.json({ id: result.insertId });
-//   });
-// });
+router.post("/api/burgers", function(req, res) {
+    console.log('burger ' + req.body.burger)
+  burger.create(["burger"], [req.body.burger], function(result) {
+    // Send back the ID of the new quote
+    res.json({ id: result.insertId });
+  });
+});
+
+// Update eat_Me value for corresponding burger
+
 
 // app.post("/", function(req, res) {
 //     console.log(req);
@@ -45,14 +49,14 @@ router.get("/", function(req, res) {
 //     });
 //   });
 
-router.put("/api/burgers", function(req, res) {
-  var condition = "burger = " + req.params.burger;
+router.put("/api/burgers/:id", function(req, res) {
+  var condition = "id = " + req.params.id; // {eat_Me: true}
 
-  console.log("condition", condition);
+  console.log("burger_id: ", condition);
 
   burger.update(
     {
-      burger: req.body.burger
+      eat_Me: req.body.eat_Me
     },
     condition,
     function(result) {
