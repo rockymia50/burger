@@ -39,15 +39,15 @@ router.post("/api/burgers", function(req, res) {
 // Update eat_Me value for corresponding burger
 
 
-// app.post("/", function(req, res) {
-//     console.log(req);
-//     connection.query("INSERT INTO burgers (burger) VALUES (?)", [req.body.burger], function(err, result) {
-//       if (err) {
-//         throw err;
-//       }
-//       res.redirect("/");
-//     });
-//   });
+router.post("/", function(req, res) {
+    console.log(req);
+    connection.query("INSERT INTO burgers (burger) VALUES (?)", [req.body.burger], function(err, result) {
+      if (err) {
+        throw err;
+      }
+      res.redirect("/");
+    });
+  });
 
 router.put("/api/burgers/:id", function(req, res) {
   var condition = "id = " + req.params.id; // {eat_Me: true}

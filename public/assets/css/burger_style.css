@@ -1,20 +1,20 @@
 li {
     padding: 5px;
     margin: 5px;
-    background: #faebd7;
+    background: #f39923;
   }
   
-  .label {
-    font-weight: bold;
-  }
+ body{
+   background-color: darkgoldenrod;
+ }
   
-  .create-update-form {
+  #burgerForm {
     padding: 5px;
     margin: 5px;
     background: aqua;
   }
   
-  .form-group {
+  #eatForm{
     margin-bottom: 5px;
   }
   

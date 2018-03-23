@@ -1,29 +1,32 @@
-<h1>Welcome to IN n Out Burger</h1>
-
-<h3>Please enter your burger order</h3>
+<div id="main" <h1>Welcome to IN n Out Burger </h1>
+  <div href="../img/Thick-Burger-Vector.png">
+  </div>
+  <h3>Please enter your burger order</h3>
+</div>
 
 <ul>
   {{#each burgers}}
-  	<li>
-       <p>burger: {{this.burger}}</p>
-        <button onclick="eatBurger(event)" data-id="{{id}}">EAT ME</button>
-       
-  	</li>
+  <li>
+    <p>burger: {{this.burger}}</p>
+    <button onclick="eatBurger(event)" data-id="{{id}}">EAT ME</button>
+
+  </li>
   {{/each}}
 </ul>
 
+
+
 <div>
   <form id="burgerForm">
-  	<textarea type="text" name="burger"></textarea>
-  	<button type="submit">Submit</button>
+    <textarea type="text" name="burger"></textarea>
+    <button type="submit">Submit</button>
   </form>
 </div>
 
 
 <div>
-<form id="eatForm" >
-<button type="submit">EAT ME</button>
+  <form id="eatForm">
+    <button type="submit">EAT ME</button>
 
   </form>
 </div>
-
