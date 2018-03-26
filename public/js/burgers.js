@@ -36,6 +36,10 @@ $(function () {
 
         // update the burger
 
+        var newBurger = {
+            burger: $("[name=burger]").val().trim()
+        };
+
         $.ajax("/api/burgers/" + id,{
             type: "PUT",
             data: eatBurger
@@ -48,21 +52,19 @@ $(function () {
         
 
 
-        /*var newBurger = {
-            burger: $("[name=burger]").val().trim()
-        };
+        
 
-        // Send the POST request.
-        $.ajax("/api/burgers", {
-            type: "POST",
-            data: newBurger
-        }).then(
-            function () {
-                console.log("created new burger");
-                // Reload the page to get the updated list
-                location.reload();
-            }
-        );*/
+        // // Send the POST request.
+        // $.ajax("/api/burgers", {
+        //     type: "POST",
+        //     data: newBurger
+        // }).then(
+        //     function () {
+        //         console.log("created new burger");
+        //         // Reload the page to get the updated list
+        //         location.reload();
+        //     }
+        // );*/
     };
     window.eatBurger = eatBurger;
 
