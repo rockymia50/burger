@@ -1,13 +1,4 @@
-// 1. Inside your `burger` directory, create a folder named `controllers`.
-
-// 2. In `controllers`, create the `burgers_controller.js` file.
-
-// 3. Inside the `burgers_controller.js` file, import the following:
-
-//    * Express
-//    * `burger.js`
-
-// 4. Create the `router` for the app, and export the `router` at the end of your file.
+// Import (require) Express, router, and burger.js
 
 var express = require("express");
 
@@ -37,6 +28,9 @@ router.post("/api/burgers", function(req, res) {
 });
 
 // Update eat_Me value for corresponding burger
+
+
+
 
 
 router.post("/", function(req, res) {
@@ -70,5 +64,5 @@ router.put("/api/burgers/:id", function(req, res) {
   );
 });
 
-// Export routes for server.js to use.
+// Export router to use.
 module.exports = router;
