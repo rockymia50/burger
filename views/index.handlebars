@@ -6,29 +6,34 @@
   <h3>Please enter your burger order</h3>
 </div>
 
-<ul>
+<div>
   {{#each burgers}}
-  <li>
-    <p>burger: {{this.burger}}</p>
-    <button onclick="eatBurger(event)" data-id="{{id}}">EAT ME</button>
-
-  </li>
+  <div id="newBurger">
+    <p>test {{this.burger}}</p> 
+    <button onclick="eatBurger(event)" data-id="{{id}}">EAT ME</button>  
+  </div>
   {{/each}}
-</ul>
+</div>
 
+<div>
+    <p>eatMe: {{eat_Me}}</p>
+
+</div>
 
 
 <div>
   <form id="burgerForm">
     <textarea type="text" name="burger"></textarea>
+    <br>
     <button type="submit">Submit</button>
   </form>
 </div>
 
 
 <div>
-  <form id="eatForm">
-    <button type="submit">EAT ME</button>
-
-  </form>
-</div>
+  {{#each eatBurger }}
+  <div id="burgerEaten">
+    <p>{{this.burger}}</p>
+  </div>
+  {{/each}}
+<div></div>

@@ -28,11 +28,6 @@ router.post("/api/burgers", function(req, res) {
 });
 
 // Update eat_Me value for corresponding burger
-
-
-
-
-
 router.post("/", function(req, res) {
     console.log(req);
     connection.query("INSERT INTO burgers (burger) VALUES (?)", [req.body.burger], function(err, result) {
@@ -43,6 +38,16 @@ router.post("/", function(req, res) {
     });
   });
 
+  router.post("/api/burgers", function(req, res) {
+    console.log('eat ' + req.body.burger)
+  burger.create(["burger"], [req.body.burger], function(result) {
+    // Send back the ID of the new quote
+    res.json({ id: result.insertId });
+  });
+});
+
+
+  
 router.put("/api/burgers/:id", function(req, res) {
   var condition = "id = " + req.params.id; // {eat_Me: true}
 

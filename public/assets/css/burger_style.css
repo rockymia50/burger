@@ -1,20 +1,25 @@
-li {
+#newBurger {
     padding: 5px;
     margin: 5px;
-    background: #f39923;
+    background-image: url('../img/Burger-Vector-6.png');
+    display: inline-table;
+    width:20%;
   }
   
  body{
-   background-color: darkgoldenrod;
+   background-color: darkgoldenrod
  }
   
   #burgerForm {
     padding: 5px;
     margin: 5px;
     background: aqua;
+    width:30%;
+    align-items: center;
   }
   
   #eatForm{
     margin-bottom: 5px;
+    align-items: center;
   }
   
