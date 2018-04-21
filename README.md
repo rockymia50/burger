@@ -1,8 +1,6 @@
-# burger
+# Burger Logger
 
-##Burger Logger
-
-![alt text](https://github.com/rockymia50/Star-Wars-RPG/blob/master/assets/images/StarWars.png?raw=true "Star Wars RPG") 
+![alt text](https://github.com/rockymia50/burger/blob/master/Thick-Burger-Vector.png?raw=true "Burger Logger") 
 
 
  Eat-Da-Burger! is a restaurant app that lets users input the names of burgers they'd like to eat.
